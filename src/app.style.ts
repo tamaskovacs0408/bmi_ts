@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-const Wrapper = styled.main`
-  background-color: #021E36;
+export const Wrapper = styled.main`
+  width: 100vw;
+  height: 100vh;
+  background-color: #021e36;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   display: flex;
