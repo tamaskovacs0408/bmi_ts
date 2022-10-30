@@ -1,9 +1,11 @@
 import React from 'react';
+import {Wrapper} from './app.style'
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Wrapper>
+      <h1>BMI Calculator</h1>
+    </Wrapper>
   );
 }
 
