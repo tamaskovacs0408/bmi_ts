@@ -1,24 +1,32 @@
 import React from 'react';
-import {Wrapper} from './calculator.style';
+import {Wrapper, Form, Label, Input, Button} from './calculator.style';
 
 const Calculator: React.FC = () => {
   return (
     <Wrapper>
-      <form>
-        <input
-          type="number"
-          step="0.1"
-          placeholder="Enter you weight in kg"
-          required
-        />
-        <input
-          type="number"
-          step="0.1"
-          placeholder="Enter you height in cm"
-          required
-        />
-        <button type='submit'>Caluculate</button>
-      </form>
+      <Form>
+        <Label>
+          Weight
+          <Input
+            type="number"
+            step="0.1"
+            min="0"
+            placeholder="Enter you weight in kg"
+            required
+          />
+        </Label>
+        <Label>
+          Height
+          <Input
+            type="number"
+            step="0.1"
+            min="0"
+            placeholder="Enter you height in cm"
+            required
+          />
+        </Label>
+        <Button type="submit">Calculate</Button>
+      </Form>
     </Wrapper>
   );
 }
