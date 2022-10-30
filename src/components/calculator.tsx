@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import {Wrapper} from './calculator.style';
 
-const calculator = () => {
+const Calculator = () => {
   return (
-    <div>calculator</div>
+    <Wrapper>calculator</Wrapper>
   )
 }
 
-export default calculator;
+export default Calculator;
