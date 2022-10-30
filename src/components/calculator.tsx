@@ -3,7 +3,9 @@ import {Wrapper} from './calculator.style';
 
 const Calculator = () => {
   return (
-    <Wrapper>calculator</Wrapper>
+    <Wrapper>
+      
+    </Wrapper>
   )
 }
 
