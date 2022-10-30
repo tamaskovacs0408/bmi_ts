@@ -1,5 +1,8 @@
 import React from 'react';
 import {Wrapper, Form, Label, Input, Button} from './calculator.style';
+import Result from './Result';
+
+// BMI formula: [weight (kg) / height (cm) / height (cm)] * 10,000
 
 const Calculator: React.FC = () => {
   return (
@@ -27,6 +30,7 @@ const Calculator: React.FC = () => {
         </Label>
         <Button type="submit">Calculate</Button>
       </Form>
+      <Result />
     </Wrapper>
   );
 }
