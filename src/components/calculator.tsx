@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Wrapper, Form, Label, Input, Button } from "./calculator.style";
+import { Wrapper, Form, Input, Button } from "./calculator.style";
 import Result from "./Result";
-
-// BMI formula: [weight (kg) / height (cm) / height (cm)] * 10,000
 
 const Calculator = () => {
   const [weight, setWeight] = useState<number | string | null>(null);
@@ -34,8 +32,6 @@ const Calculator = () => {
   return (
     <Wrapper>
       <Form onSubmit={handleSubmit}>
-        <Label>
-          Weight
           <Input
             type="number"
             step="0.1"
@@ -46,9 +42,6 @@ const Calculator = () => {
             }}
             required
           />
-        </Label>
-        <Label>
-          Height
           <Input
             type="number"
             step="0.1"
@@ -59,7 +52,6 @@ const Calculator = () => {
             }}
             required
           />
-        </Label>
         <Button type="submit">Calculate</Button>
       </Form>
       <Result
