@@ -48,7 +48,7 @@ const Calculator = () => {
         </Label>
         <Button type="submit">Calculate</Button>
       </Form>
-      <Result />
+      <Result height={height} weight={weight} bmi={bmi}/>
     </Wrapper>
   );
 }
