@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Wrapper, Form, Label, Input, Button} from './calculator.style';
-import Result from './Result';
+import React, { useState } from "react";
+import { Wrapper, Form, Label, Input, Button } from "./calculator.style";
+import Result from "./Result";
 
 // BMI formula: [weight (kg) / height (cm) / height (cm)] * 10,000
 
@@ -10,12 +10,14 @@ const Calculator = () => {
   const [bmi, setBmi] = useState(0);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const bmi: number = (Number(weight) / Number(height) / Number(height)) * 10000;
+    const bmiForumla: number = Number(
+      ((Number(weight) / Number(height) / Number(height)) * 10000).toFixed(1)
+    );
 
-    console.log(Number(bmi.toFixed(1)))
-  }
+    setBmi(bmiForumla);
+  };
 
   return (
     <Wrapper>
@@ -48,9 +50,9 @@ const Calculator = () => {
         </Label>
         <Button type="submit">Calculate</Button>
       </Form>
-      <Result height={height} weight={weight} bmi={bmi}/>
+      <Result height={height} weight={weight} bmi={bmi} />
     </Wrapper>
   );
-}
+};
 
 export default Calculator;
