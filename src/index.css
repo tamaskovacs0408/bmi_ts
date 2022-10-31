@@ -8,6 +8,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  background-color: #021e36;
+}
+
 ::placeholder {
   color: white;
 }
