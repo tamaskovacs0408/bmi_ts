@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 
@@ -12,11 +12,6 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
-
-export const Label = styled.label`
-  display: block;
-  font-size: 1.8rem;
 `
 
 export const Input = styled.input`
