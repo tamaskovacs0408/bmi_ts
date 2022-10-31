@@ -4,15 +4,17 @@ import Result from './Result';
 
 // BMI formula: [weight (kg) / height (cm) / height (cm)] * 10,000
 
-const Calculator: React.FC = () => {
+const Calculator = () => {
   const [weight, setWeight] = useState<number | string | null>(null)
   const [height, setHeight] = useState<number | string | null>(null);
 
-  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+  }
 
   return (
     <Wrapper>
-      <Form onSubmit={handleSubmit()}>
+      <Form onSubmit={handleSubmit}>
         <Label>
           Weight
           <Input
@@ -20,7 +22,9 @@ const Calculator: React.FC = () => {
             step="0.1"
             min="0"
             placeholder="Enter you weight in kg"
-            onChange={(event) => {setWeight(event.target.value)}}
+            onChange={(e) => {
+              setWeight(e.target.value);
+            }}
             required
           />
         </Label>
@@ -31,7 +35,9 @@ const Calculator: React.FC = () => {
             step="0.1"
             min="0"
             placeholder="Enter you height in cm"
-            onChange={(event) => {setHeight(event.target.value)}}
+            onChange={(e) => {
+              setHeight(e.target.value);
+            }}
             required
           />
         </Label>
