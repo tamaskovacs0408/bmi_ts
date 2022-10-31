@@ -28,6 +28,10 @@ export const Input = styled.input`
   border-bottom: 2px solid white;
   background-color: transparent;
   color: white;
+
+  &:focus {
+    outline: none;
+  }
 `
 
 export const Button = styled.button`
