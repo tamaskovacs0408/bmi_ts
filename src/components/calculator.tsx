@@ -5,11 +5,16 @@ import Result from './Result';
 // BMI formula: [weight (kg) / height (cm) / height (cm)] * 10,000
 
 const Calculator = () => {
-  const [weight, setWeight] = useState<number | string | null>(null)
-  const [height, setHeight] = useState<number | string | null>(null);
+  const [weight, setWeight] = useState<number | string>(0);
+  const [height, setHeight] = useState<number | string>(0);
+  const [bmi, setBmi] = useState(0);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    const bmi: number = (Number(weight) / Number(height) / Number(height)) * 10000;
+
+    console.log(Number(bmi.toFixed(1)))
   }
 
   return (
