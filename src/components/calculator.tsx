@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Wrapper, Form, Label, Input, Button} from './calculator.style';
 import Result from './Result';
 
 // BMI formula: [weight (kg) / height (cm) / height (cm)] * 10,000
 
 const Calculator: React.FC = () => {
+  const [weight, setWeight] = useState<number | null>(null)
+  const [height, setHeight] = useState<number | null>(null)
+
   return (
     <Wrapper>
       <Form>
