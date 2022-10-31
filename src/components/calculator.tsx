@@ -5,9 +5,10 @@ import Result from "./Result";
 // BMI formula: [weight (kg) / height (cm) / height (cm)] * 10,000
 
 const Calculator = () => {
-  const [weight, setWeight] = useState<number | string>(0);
-  const [height, setHeight] = useState<number | string>(0);
-  const [bmi, setBmi] = useState(0);
+  const [weight, setWeight] = useState<number | string | null>(null);
+  const [height, setHeight] = useState<number | string | null>(null);
+  const [bmi, setBmi] = useState<number>(0);
+  const [weightStatus, setWeightStatus] = useState<string | undefined>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,6 +18,17 @@ const Calculator = () => {
     );
 
     setBmi(bmiForumla);
+
+    if(bmi < 18.5) {
+      setWeightStatus('Underweight');
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+      setWeightStatus('Healthy Weight');
+    } else if (bmi >= 25 && bmi <= 29.9) {
+      setWeightStatus('Overweight')
+    } else {
+      setWeightStatus('Obesity')
+    }
+
   };
 
   return (
@@ -50,7 +62,12 @@ const Calculator = () => {
         </Label>
         <Button type="submit">Calculate</Button>
       </Form>
-      <Result height={height} weight={weight} bmi={bmi} />
+      <Result
+        height={height}
+        weight={weight}
+        bmi={bmi}
+        weightStatus={weightStatus}
+      />
     </Wrapper>
   );
 };

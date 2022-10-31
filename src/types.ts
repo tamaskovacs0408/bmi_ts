@@ -1,5 +1,6 @@
 export interface Props {
-  height: number | string;
-  weight: number | string;
-  bmi: number;
+  height: number | string | null;
+  weight: number | string | null;
+  bmi: number | null;
+  weightStatus: string | null | undefined;
 }
