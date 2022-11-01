@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Props } from "../types";
 import { Wrapper, Res } from "./result.style";
 
