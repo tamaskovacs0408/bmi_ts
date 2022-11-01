@@ -32,6 +32,8 @@ const Calculator = () => {
   return (
     <Wrapper>
       <Form onSubmit={handleSubmit}>
+        <label>
+          KG
           <Input
             type="number"
             step="0.1"
@@ -42,6 +44,9 @@ const Calculator = () => {
             }}
             required
           />
+        </label>
+        <label>
+          CM
           <Input
             type="number"
             step="0.1"
@@ -52,12 +57,10 @@ const Calculator = () => {
             }}
             required
           />
+        </label>
         <Button type="submit">Calculate</Button>
       </Form>
-      <Result
-        bmi={bmi}
-        weightStatus={weightStatus}
-      />
+      <Result bmi={bmi} weightStatus={weightStatus} />
     </Wrapper>
   );
 };
