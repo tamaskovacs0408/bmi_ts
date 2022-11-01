@@ -1,15 +1,18 @@
-import React, {useState} from 'react'
-import { Props } from '../types'
+import React, { useState } from "react";
+import { Props } from "../types";
+import { Wrapper, Res } from "./result.style";
 
-const Result: React.FC<Props> = ({bmi, weightStatus}) => {
-
-
+const Result: React.FC<Props> = ({ bmi, weightStatus }) => {
   return (
-    <>
-      <h2>Your BMI: {bmi}</h2>
-      <h2>Your weight status: {weightStatus}</h2>
-    </>
-  )
-}
+    <Wrapper>
+      <h2>
+        Your BMI: <Res>{bmi}</Res>{" "}
+      </h2>
+      <h2>
+        Your weight status: <Res>{weightStatus}</Res>
+      </h2>
+    </Wrapper>
+  );
+};
 
-export default Result
+export default Result;
