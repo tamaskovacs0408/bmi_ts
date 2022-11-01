@@ -5,7 +5,9 @@ import Calculator from './components/Calculator';
 function App() {
   return (
     <Wrapper>
-      <h1>BMI Calculator</h1>
+      <h1>
+        <span>BMI</span> Calculator
+      </h1>
       <Calculator />
     </Wrapper>
   );
