@@ -30,7 +30,7 @@ export const Input = styled.input`
 `
 
 export const Button = styled.button`
-  background-color: #30bced;
+  background-color: #79c12c;
   color: black;
   font-size: 1.8rem;
   font-weight: 600;
@@ -42,6 +42,6 @@ export const Button = styled.button`
   transition: all 0.3s ease-in;
 
   &:hover {
-    background-color: #80cde9;
+    background-color: #c5e26c;
   }
 `;
