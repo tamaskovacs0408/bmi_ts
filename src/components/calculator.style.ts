@@ -37,13 +37,13 @@ export const Input = styled.input`
 export const Button = styled.button`
   background-color: #79c12c;
   color: black;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 10px;
   padding: 5px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in;
 

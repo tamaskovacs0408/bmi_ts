@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
   align-items: center;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
     margin: 10px auto;
   }
@@ -17,5 +17,7 @@ export const Wrapper = styled.section`
 
 export const Res = styled.span`
   margin: 10px auto !important;
-  font-size: 2rem !important;
+  font-size: 2.3rem !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
 `;
