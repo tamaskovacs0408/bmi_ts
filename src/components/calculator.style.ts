@@ -17,6 +17,11 @@ export const Form = styled.form`
     font-size: 1.2rem;
     color: #79c12c;
   }
+  @media screen and (min-width: 768px){
+    label {
+      font: 1.8rem;
+    }
+  }
 `;
 
 export const Input = styled.input`
@@ -31,6 +36,11 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
+  }
+
+  @media screen and (min-width: 768px){
+    width: 220px;
+    font-size: 2rem;
   }
 `
 
@@ -49,5 +59,9 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #c5e26c;
+  }
+
+  @media screen and (min-width: 768px){
+    font-size: 2.5rem;
   }
 `;

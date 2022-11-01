@@ -11,10 +11,17 @@ export const Wrapper = styled.main`
   margin: 20px auto;
   border: 2px solid #e6e6e6;
   border-radius: 5px;
-  
+
   @media screen and (min-width: 768px) {
-    height: 800px;
-    justify-content: center;
+    width: 400px;
+    height: 700px;
+  }
+
+  @media screen and (min-width: 992px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   h1 {
@@ -24,7 +31,8 @@ export const Wrapper = styled.main`
     text-align: center;
 
     @media screen and (min-width: 768px) {
-      font-size: 6rem;
+      margin: none;
+      font-size: 5.5rem;
     }
   }
 

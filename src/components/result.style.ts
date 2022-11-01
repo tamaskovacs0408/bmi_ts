@@ -12,6 +12,10 @@ export const Wrapper = styled.section`
     font-size: 2.2rem;
     text-align: center;
     margin: 10px auto;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.7rem;
+    }
   }
 `;
 
@@ -20,4 +24,8 @@ export const Res = styled.span`
   font-size: 2.3rem !important;
   letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.8rem !important;
+  }
 `;
