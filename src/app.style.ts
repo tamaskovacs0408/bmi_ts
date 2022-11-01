@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.main`
-  width: 100vw;
-  height: 100vh;
+  width: 300px;
+  height: 600px;
   color: #e6e6e6;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
   align-items: center;
   margin: 20px auto;
-
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+  
   @media screen and (min-width: 768px) {
     height: 800px;
     justify-content: center;
