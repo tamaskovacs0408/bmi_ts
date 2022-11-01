@@ -12,10 +12,15 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+
+  label {
+    font-size: 1.2rem;
+    color: #79c12c;
+  }
+`;
 
 export const Input = styled.input`
-  width: 250px;
+  width: 200px;
   margin: 15px;
   padding: 5px;
   font-size: 1.8rem;
@@ -35,6 +40,7 @@ export const Button = styled.button`
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
+  margin-top: 10px;
   padding: 5px;
   border: none;
   border-radius: 10px;
