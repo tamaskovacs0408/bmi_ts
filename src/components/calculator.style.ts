@@ -42,6 +42,10 @@ export const Input = styled.input`
     width: 220px;
     font-size: 2rem;
   }
+
+  @media screen and (min-width: 992px){
+    width: 250px;
+  }
 `
 
 export const Button = styled.button`
