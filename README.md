@@ -1,5 +1,6 @@
 # BMI calculator
 
+Try out on live [here](https://tamaskovacs0408.github.io/bmi_ts/)
 ## About
 
 BMI (Body Mass Index) is a value derived from the weight and the height. It gives back your weight status (underweight, normal weight, overweight or obesity) which based on the calculated BMI points.
