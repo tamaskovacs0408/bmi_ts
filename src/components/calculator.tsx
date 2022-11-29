@@ -11,22 +11,21 @@ const Calculator = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const bmiForumla: number = Number(
+    const bmiFormula: number = Number(
       ((Number(weight) / Number(height) / Number(height)) * 10000).toFixed(1)
     );
 
-    setBmi(bmiForumla);
-
-    if(bmi < 18.5) {
+    if(bmiFormula < 18.5) {
       setWeightStatus('Underweight');
-    } else if (bmi >= 18.5 && bmi <= 24.9) {
+    } else if (bmiFormula >= 18.5 && bmiFormula <= 24.9) {
       setWeightStatus('Healthy Weight');
-    } else if (bmi >= 25 && bmi <= 29.9) {
+    } else if (bmiFormula >= 25 && bmiFormula <= 29.9) {
       setWeightStatus('Overweight')
     } else {
       setWeightStatus('Obesity')
     }
 
+    setBmi(bmiFormula);
   };
 
   return (
