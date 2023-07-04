@@ -2,7 +2,7 @@ import useCalculate from "../hooks/useCalculate";
 import { Wrapper, Form, Input, Button } from "./calculator.style";
 import Result from "./Result";
 
-const Calculator = () => {
+const Calculator: React.FC = () => {
   const {
     setWeight,
     setHeight,
