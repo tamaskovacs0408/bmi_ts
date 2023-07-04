@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { UseCalculateResult } from "../components/useCalculateResul";
+import { UseCalculateResult } from "../types";
 
 const useCalculate = (): UseCalculateResult => {
   const [weight, setWeight] = useState<number | string | null>(null);
