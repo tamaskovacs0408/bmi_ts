@@ -15,11 +15,6 @@ const useCalculate = (): UseCalculateResult => {
         ((Number(weight) / Number(height) / Number(height)) * 10000).toFixed(1)
       );
 
-
-      console.log(weight);
-      console.log(height);
-      console.log(bmi);
-
       if (bmi < 18.5) {
         setWeightStatus("Underweight");
       } else if (bmi >= 18.5 && bmi <= 24.9) {
