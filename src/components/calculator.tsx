@@ -1,32 +1,15 @@
-import React, { useState } from "react";
+import useCalculate from "../hooks/useCalculate";
 import { Wrapper, Form, Input, Button } from "./calculator.style";
 import Result from "./Result";
 
 const Calculator = () => {
-  const [weight, setWeight] = useState<number | string | null>(null);
-  const [height, setHeight] = useState<number | string | null>(null);
-  const [bmi, setBmi] = useState<number>(0);
-  const [weightStatus, setWeightStatus] = useState<string | undefined>("");
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    let bmi: number = Number(
-      ((Number(weight) / Number(height) / Number(height)) * 10000).toFixed(1)
-    );
-
-    setBmi(bmi);
-
-    if (bmi < 18.5) {
-      setWeightStatus((weightStatus) => (weightStatus = "Underweight"));
-    } else if (bmi >= 18.5 && bmi <= 24.9) {
-      setWeightStatus((weightStatus) => (weightStatus = "Healthy Weight"));
-    } else if (bmi >= 25 && bmi <= 29.9) {
-      setWeightStatus((weightStatus) => (weightStatus = "Overweight"));
-    } else {
-      setWeightStatus((weightStatus) => (weightStatus = "Obesity"));
-    }
-  };
+  const {
+    setWeight,
+    setHeight,
+    bmi,
+    weightStatus,
+    handleSubmit,
+  } = useCalculate();
 
   return (
     <Wrapper>
@@ -37,7 +20,7 @@ const Calculator = () => {
             type="number"
             step="0.1"
             min="0"
-            placeholder="Enter you weight in kg"
+            placeholder="Enter your weight in kg"
             onChange={(e) => {
               setWeight(e.target.value);
             }}
@@ -50,7 +33,7 @@ const Calculator = () => {
             type="number"
             step="0.1"
             min="0"
-            placeholder="Enter you height in cm"
+            placeholder="Enter your height in cm"
             onChange={(e) => {
               setHeight(e.target.value);
             }}
